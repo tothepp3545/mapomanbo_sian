@@ -5,7 +5,7 @@
 <br><br>
 01_1
 <br>
-https://tothepp3545.github.io/mapomanbo_sian/01_1
+<a href="https://tothepp3545.github.io/mapomanbo_sian/01_1" target="_blank">https://tothepp3545.github.io/mapomanbo_sian/01_1</a>
 <br><br>
 01_2
 <br>
