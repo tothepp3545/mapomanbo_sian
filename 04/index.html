@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mapomanbo</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.1/css/jquery.mb.YTPlayer.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.1/jquery.mb.YTPlayer.min.js"></script>
+    <script src="js/slick.min.js"></script>
+</head>
+<body>
+
+    <div id="wrap">
+       
+        <div id="testObj">
+            <div class="row">
+                <div class="header">
+                    <div class="logo">
+                        <img src="../images/logo.png" alt="">
+                    </div>
+
+                    <div class="nav">
+                        <div class="menu">
+                            <p>마포만보</p>
+                        </div>
+                        <div class="menu">
+                            <p>여행</p>
+                        </div>
+                        <div class="menu">
+                            <p>공간</p>
+                        </div>
+                        <div class="menu">
+                            <p>기록</p>
+                        </div>
+                        <div class="menu">
+                            <p>정보</p>
+                        </div>
+                    </div>
+
+                    <div class="mNavOpen">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="rightBox">
+                        <div class="members">
+                            <a><img src="../images/icon_login_big.png" alt=""></a>
+                            <a><img src="../images/icon_reservation_big.png" alt=""></a>
+                        </div>
+    
+                        <div class="search cf">
+                            <input type="text" placeholder="만보 하고 싶은 동네">
+                            <img src="../images/icon_search.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    (function($){
+                        function openSearch(){
+                            $('.search').toggleClass('on')
+                            if ($('.search').hasClass('on')) {
+                                $('.search').stop().animate({
+                                    width: '245px'
+                                }, 300).css({
+                                    padding: '5px 10px 5px 25px'
+                                })
+                                $('.search input').css({
+                                    opacity: '1',
+                                    display: 'inline-block'
+                                })
+                            } else {
+                                $('.search').stop().animate({
+                                    width: '40px',
+                                    padding: '5px 0'
+                                }, 500)
+                                $('.search input').css({
+                                    opacity: '0',
+                                    display: 'none'
+                                })
+                            }
+                        }
+                        $('.search img').on('click', openSearch)
+                    })(jQuery)
+                </script>
+
+                </div>
+            </div>
+            
+        </div>
+
+        <figure id="videoBg">
+            <div class="pattern"></div>
+            <div class="mainVideo player"></div>
+            <!-- <video muted autoplay loop src="../video/video02.mp4"></video> -->
+            <div class="mobileVideo">
+                <img src="../images/mobile_gif_01.gif" alt="">
+            </div>
+        </figure>
+
+        <footer id="footer">
+            <div class="partner row">
+                <div class="footSlide">
+                    <div class="slide slide1">
+                        <a href="#"><img src="../images/footer_partner_001.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide2">
+                        <a href="#"><img src="../images/footer_partner_002.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide3">
+                        <a href="#"><img src="../images/footer_partner_003.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide4">
+                        <a href="#"><img src="../images/footer_partner_004.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide5">
+                        <a href="#"><img src="../images/footer_partner_005.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide6">
+                        <a href="#"><img src="../images/footer_partner_006.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide7">
+                        <a href="#"><img src="../images/footer_partner_001.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide8">
+                        <a href="#"><img src="../images/footer_partner_002.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide9">
+                        <a href="#"><img src="../images/footer_partner_003.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide10">
+                        <a href="#"><img src="../images/footer_partner_004.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide11">
+                        <a href="#"><img src="../images/footer_partner_005.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide12">
+                        <a href="#"><img src="../images/footer_partner_006.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="companyInfo">
+                <div class="row">
+                    <div class="copyLogo">
+                        <a href="#"><img src="../images/footer_companyInfo_001.png" alt=""></a>
+                        <a href="#"><img src="../images/footer_companyInfo_002.png" alt=""></a>
+                    </div>
+                    <div class="addInfo">
+                        <p>
+                            <span>(129-904) 서울시 마포구 매봉산로 18 마포창업복지관 1, 2층</span>
+                            <span>TEL. 02-303-5279</span>
+                            <span>FAX. 02-6499-1177</span>
+                        </p>
+                        <p>2018 마포마을 여행플랫폼 구축사업단 ALL RIGHTS RESERVED.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    
+    <script src="js/myjs.js"></script>
+
+</body>
+</html>

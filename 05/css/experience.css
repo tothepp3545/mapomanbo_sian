@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+/* common */
+#container { padding-top: 70px; }
+.pageAddr { height: 30px; background: #fff; padding: 0 20px; line-height: 30px; display: none; }
+.pageAddr p { display: inline-block; color: #a8a8a8; font-size: 0.8rem; }
+.pageAddr p span { color: #fa7c80; font-weight: bold; }
+
+/* slider */
+.exslider { position: relative; width: 100%; height: 500px; overflow: hidden; }
+.exslider .slideBg li { position: absolute; width: 100%; background-position: center; background-repeat: no-repeat; background-size: cover; height: 100%; }
+.exslider .slideBg li:nth-child(1)
+{ background-image: url(../images/sub/experience_slide_001_main.png); }
+.exslider .slideBg li:nth-child(2)
+{ background-image: url(../images/sub/experience_slide_002_main.jpg); }
+.exslider .slideBg li:nth-child(3)
+{ background-image: url(../images/sub/experience_slide_001_main.png); }
+.exslider .slideBg li:nth-child(4)
+{ background-image: url(../images/sub/experience_slide_002_main.jpg); }
+.exslider .slideBg li:nth-child(5)
+{ background-image: url(../images/sub/experience_slide_001_main.png); }
+/* slider - left Txt */
+.exslider .slideTxt { position: relative; width: 100%; }
+.exslider .slideTxt li { position: absolute; width: 100%; height: 500px; }
+.exslider .slideTxt .row2 { position: relative; max-width: 1200px; margin: 0 auto; height: 100%; }
+.exslider .slideTxt .explan { position: absolute; top: 50%; transform: translateY(-50%); width: 280px; }
+.exslider .slideTxt .explan em { background: #ee8285; color: #fff; font-size: 0.9rem; padding: 2px 13px; border-radius: 50px; }
+.exslider .slideTxt .explan h4 { font-size: 3rem; color: #fff; word-break: keep-all; padding: 20px 0; line-height: 3.7rem; }
+.exslider .slideTxt .explan .tag span { color: #fff; padding-right: 5px; font-size: 1rem; display: inline-block; line-height: 1.6rem; }
+.exslider .slideTxt .explan button { background: #ee8285; color: #fff; font-size: 1rem; letter-spacing: -1px; font-weight: bold; padding: 9px 28px; margin-top: 20px; cursor: pointer; }
+/* slider - slideBg + slideTxt position */
+.exslider .slide:nth-child(1) { left: 0; }
+.exslider .slide:nth-child(2) { left: 100%; }
+.exslider .slide:nth-child(3) { left: 200%; }
+.exslider .slide:nth-child(4) { left: 300%; }
+.exslider .slide:nth-child(5) { left: 400%; }
+/* slider - right List */
+.exslider .row { position: relative; }
+.exslider .rightList { position: absolute; right: 0; width: 300px; padding-top: 72.5px; }
+.exslider .rightList ul li { height: 63px; margin-bottom: 10px; opacity: 0.7; cursor: pointer; }
+.exslider .rightList ul li.on { opacity: 1; }
+.exslider .rightList .imgBox { position: relative; float: left; width: 80px; overflow: hidden; height: 100%; }
+.exslider .rightList .imgBox img { position: absolute; top: 50%; transform: translateY(-50%); width: 100%; min-height: 100%; }
+.exslider .rightList .txtBox { float: right; width: 220px; background: #fff; height: 63px; font-size: 0.9rem; padding: 11px; }
+.exslider .rightList .txtBox span { display: inline-block; color: #ee8285; font-weight: bold; padding-bottom: 5px; }
+/* slider - dot button */
+.exslider .dotBtn { position: absolute; left: 0; bottom: 30px; width: 100%; text-align: center; display: none; }
+.exslider .dotBtn a { display: inline-block; width: 12px; height: 12px; background: #fff; border-radius: 50%; margin-right: 6px; opacity: 0.5; }
+.exslider .dotBtn a:last-child { margin-right: 0; }
+.exslider .dotBtn a.on { opacity: 1; }
+
+/* category */
+.cateWrap { height: 65px; background: #fdf5f5; }
+.cateWrap .row { position: relative; }
+.cateWrap .cateAll { line-height: 65px; }
+.cateWrap .cateAll a { font-size: 0.9rem; padding: 5px 10px; border: 1px solid #ee8285; border-radius: 50px; color: #ee8285; font-weight: normal; margin-right: 10px; background: transparent; transition: all 0.3s; }
+.cateWrap .cateAll a:hover { color: #fff; background: #ee8285; }
+.cateWrap .cateAll a i { padding-left: 0.5rem; display: none; }
+.cateWrap .cateAll a.on { color: #fff; background: #ee8285; }
+.cateWrap .cateAll h3, .cateWrap .cateAll .cateMenu { display: inline-block; }
+.cateWrap .cateAll .cateMenu p { display: inline-block; }
+
+/* search */
+.cateWrap .searchBox { position: absolute; top: 14px; right: 20px; }
+.cateWrap .searchBox form { height: 37px; border-radius: 50px; width: 37px; background: #ee8285; }
+.cateWrap .searchBox form input { height: 37px; width: 80%; line-height: 38px; padding-left: 1rem; background: transparent; border: none; color: #ee8285; font-weight: bold; display: none; }
+.cateWrap .searchBox form .searchBtn { float: right; line-height: 38px; font-size: 1rem; color: #fff; padding-right: 11px; }
+
+/* List */
+.exList { padding: 100px 0 50px; }
+.exList .listBox li { float: left; width: 23.5%; margin-right: 2%; margin-bottom: 4%; }
+.exList .listBox li:nth-child(4n) { margin-right: 0; }
+.exList .listBox li .txtBox { position: relative; padding: 30px 15px; border: 1px solid #d8d8d8; border-bottom: none; border-radius: 10px 10px 0 0; height: 140px; text-align: center; }
+.exList .listBox li .txtBox em { font-size: 0.8rem; color: #fff; background: #ee8285; padding: 1px 10px; border-radius: 50px; }
+.exList .listBox li .txtBox h4 { font-size: 1.2rem; padding: 12px 0 5px; }
+.exList .listBox li .txtBox .tag { height: 2.4rem; overflow: hidden; }
+.exList .listBox li .txtBox .tag span { font-size: 0.8rem; color: #9d9d9d; font-weight: bold; margin-right: 5px; }
+.exList .listBox li .txtBox .tag span:last-child { margin-right: 0; }
+
+.exList .listBox li .imgBox { position: relative; height: 175px; }
+.exList .listBox li .imgBox .img { 
+    background-position: center; background-repeat: no-repeat; background-size: cover; height: 100%;
+    border: 1px solid #d8d8d8; border-top: none; border-radius: 0 0 10px 10px; cursor: pointer;
+    background-image: url(../images/sub/experience_main_001_thumb.png);
+}
+.exList .listBox li:nth-child(2) .imgBox .img
+{ background-image: url(../images/sub/experience_main_002_thumb.jpg); }
+
+.exList .pageNum { text-align: center; height: 32px; position: relative; width: 190px; left: 50%; transform: translateX(-50%); }
+.exList .pageNum .arr { position: absolute; top: 0; line-height: 35px; background: transparent; }
+.exList .pageNum .arr.prev { left: 0; display: none; }
+.exList .pageNum .arr.next { right: 0; }
+.exList .pageNum p { display: inline-block; font-size: 1.1rem; line-height: 32px; padding: 0 10px; }
+.exList .pageNum p.on { color: #ee8285; }
+
+
+
+
+@media only screen and (max-width: 1200px) {
+    .subVis { height: 240px; line-height: 240px; }
+    .subVis img { width: 240px; }
+
+    .exslider .dotBtn { display: block; }
+    .exslider { height: 250px; }
+    .exslider .slideBg li:before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,.2); }
+    .exslider .slideTxt li { height: 250px; }
+    .exslider .slideTxt .row2 { padding: 0 20px; }
+    .exslider .slideTxt .explan { width: 100%; }
+    .exslider .slideTxt .explan h4 { font-size: 1.6rem; padding: 20px 0 17px; line-height: 2rem; }
+    .exslider .slideTxt .explan .tag span { font-size: 0.8rem; line-height: 1.2rem; }
+    .exslider .slideTxt .explan button { font-size: 0.9rem; padding: 7px 16px; }
+    .exslider .rightList { display: none; }
+    .exslider .dotBtn { bottom: 13px; }
+
+    .cateWrap .cateAll a { width: 250px; }
+    .cateWrap .cateAll a i { display: inline-block; }
+    .cateWrap .cateAll .cateMenu { display: none; line-height: 1rem; }
+
+    .exList { padding: 50px 40px; }
+    .exList .listBox li { width: 49%; }
+    .exList .listBox li:nth-child(2n) { margin-right: 0; }
+}
+
+@media only screen and (max-width: 860px) {
+    #container { padding-top: 50px; }
+    .pageAddr { display: block; }
+
+    .exList { padding: 50px 20px; }
+    .exList .listBox li { width: 100%; }
+    .exList .listBox li:nth-child(2n) { margin-right: 0; }
+    .exList .listBox li .txtBox { float: left; width: calc(100% - 130px); height: 107px; border-radius: 10px 0 0 10px; border-bottom: 1px solid #d8d8d8; border-right: none; text-align: left; padding: 10px 15px; overflow: hidden; }
+    .exList .listBox li .txtBox em { color: #ee8285; background: transparent; padding: 0; }
+    .exList .listBox li .txtBox h4 { font-size: 1rem; padding: 5px 0 7px; }
+    .exList .listBox li .txtBox .tag span { font-size: 0.8rem; color: #9d9d9d; font-weight: bold; margin-right: 5px; }
+    .exList .listBox li .txtBox .tag span:last-child { margin-right: 0; }
+    .exList .listBox li .imgBox { float: right; width: 130px; height: 107px; border-radius: 0 10px 10px 0; border-top: 1px solid #d8d8d8; border-left: none; } 
+    .exList .listBox li .imgBox .img { position: absolute; top: 50%; transform: translateY(-50%); min-height: 100%; width: 100%; border-radius: 0 10px 10px 0; }
+}

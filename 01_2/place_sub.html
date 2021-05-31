@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mapomanbo</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/place_sub.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=l7xx30d3a63a614d481194c9f9dd64357129"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+</head>
+
+<body onload="initTmap()">
+    <div id="wrap">
+       
+        <div id="header">
+            <div class="row">
+                <div class="logo">
+                    <a href="index.html"><img src="../images/logo.png" alt=""></a>
+                </div>
+
+                <div class="nav">
+                    <ul>
+                        <li class="depth1">
+                            마포만보
+                        </li>
+                        <li class="depth1">
+                            <a href="travel.html">여행</a>
+                            <ul class="depth2">
+                                <li><a href="travel.html">마을여행</a></li>
+                                <li>랜선여행</li>
+                            </ul>
+                        </li>
+                        <li class="depth1 on">
+                            <a href="place.html">공간</a>
+                        </li>
+                        <li class="depth1">
+                            기록
+                            <ul class="depth2">
+                                <li>도보여행</li>
+                                <li>해설사 인터뷰</li>
+                                <li>행사</li>
+                            </ul>
+                        </li>
+                        <li class="depth1">
+                            정보
+                            <ul class="depth2">
+                                <li>공지사항</li>
+                                <li>자주하는 질문</li>
+                                <li>문의</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mNavOpen">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="mNav">
+                    <div class="mLogo">
+                        <a href="index.html"><img src="../images/logo.png"></a>
+                    </div>
+
+                    <div class="mMember">
+                        <div class="before cf">
+                            <div class="cart">
+                                <img src="../images/icon_reservation.png" alt="">
+                                <span>내 예약</span>
+                            </div>
+
+                            <div class="login">
+                                <img src="../images/icon_login.png" alt="">
+                                <span>로그인</span>
+                            </div>
+                        </div>
+
+                        <div class="after">
+                            <div class="userName">
+                                <p><span>유재석</span>님 환영합니다.</p>
+                                <button type="button">정보수정</button>
+                            </div>
+
+                            <div class="mypage cf">
+                                <div class="cart">
+                                    <img src="../images/icon_reservation.png" alt="">
+                                    <span>내 예약</span>
+                                </div>
+                                <div class="logout">
+                                    <span>로그아웃</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mMenu">
+                        <ul>
+                            <li>마포만보</li>
+                            <li><a href="travel.html">여행</a></li>
+                            <li><a href="place.html">공간</a></li>
+                            <li>기록</li>
+                            <li>정보</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="overlay"></div>
+
+                <div class="rightBox">
+                    <div class="members">
+                        <img src="../images/icon_login.png" alt="">
+                        <img src="../images/icon_reservation.png" alt="">
+                    </div>
+
+                    <div class="search cf">
+                        <input type="text" placeholder="만보 하고 싶은 동네">
+                        <img src="../images/icon_search.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="siteMap">
+                <div class="btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="content">
+                    <ul class="smList">
+                        <li>
+                            <p class="depth1">MAIN</p>
+                        </li>
+                        <li>
+                            <p class="depth1">마포만보</p>
+                        </li>
+                        <li>
+                            <p class="depth1">여행</p>
+                            <ul class="depth2">
+                                <li>마을여행</li>
+                                <li>랜선여행</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="depth1">공간</p>
+                            <ul class="depth2">
+                                <li>음식점</li>
+                                <li>문화공간</li>
+                                <li>공원</li>
+                                <li>가게</li>
+                                <li>카페</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="depth1">기록</p>
+                            <ul class="depth2">
+                                <li>도보여행</li>
+                                <li>해설사 인터뷰</li>
+                                <li>행사</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="depth1">정보</p>
+                            <ul class="depth2">
+                                <li>공지사항</li>
+                                <li>자주하는 질문</li>
+                                <li>문의</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="depth1">MY</p>
+                            <ul class="depth2">
+                                <li>로그인</li>
+                                <li>회원가입</li>
+                                <li>아이디/비밀번호 찾기</li>
+                                <li>내 예약</li>
+                                <li>구매한 영상</li>
+                                <li>결제내역</li>
+                                <li>내정보</li>
+                                <li>회원정보변경</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- nav, sitemap 클릭 스크립트 -->
+            <script>
+                (function($){
+                    // siteMap
+                    function openSM(){
+                        $('.siteMap').toggleClass('on')
+                        if($('.siteMap').hasClass('on')){
+                            $('.siteMap .content').stop().slideDown(800)
+                        } else {
+                            $('.siteMap .content').stop().slideUp(800)
+                        }
+                    }
+                    $('.siteMap .btn').on('click', openSM)
+
+                    // nav
+                    function openSearch(){
+                            $('.search').toggleClass('on')
+                            if ($('.search').hasClass('on')) {
+                                $('.search').stop().animate({
+                                    width: '245px'
+                                }, 500, function(){
+                                    $('.search').css({
+                                        padding: '5px 7px 5px 25px'
+                                    })
+                                    $('.search input').css({
+                                        opacity: '1',
+                                        width: '149px'
+                                    })
+                                })
+                            } else {
+                                $('.search').stop().animate({
+                                    width: '41px',
+                                    padding: '5px 7px 5px 0'
+                                }, 500)
+                                $('.search input').css({
+                                    opacity: '0',
+                                    width: '0'
+                                })
+                            }
+                        }
+                    $('.search img').on('click', openSearch)
+                })(jQuery)
+            </script>
+        </div>
+
+        <div class="subBorder">
+            <div class="side">
+                <div class="left">
+                    <img src="../images/pkBorder_sub.svg" alt="" class="round top">
+                    <span class="rect"></span>
+                    <img src="../images/pkBorder_sub.svg" alt="" class="round bottom">
+                </div>
+                <div class="right">
+                    <img src="../images/pkBorder_sub.svg" alt="" class="round top">
+                    <span class="rect"></span>
+                    <img src="../images/pkBorder_sub.svg" alt="" class="round bottom">
+                </div>
+            </div>
+
+            <div class="subBottom"></div>
+        </div>
+
+        <div id="testCont">
+            <div class="row900">
+                <div class="explan2">
+                    <span class="sort">문화공간</span>
+                    <div class="wrap cf">
+                        <div class="txtBox">
+                            <h3>아트북라운지 B-PLATFORM</h3>
+                            <p class="address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                대한민국 서울특별시 마포구 합정동 372-7
+                            </p>
+                            <p class="txt">
+                                B플랫폼은 책이 만들어지고, 책이 전시되고, 책이 이야기되는 특별한 공간입니다. 그림책과 아티스트북 등 예술서적을 위주로 책을 소개하고, 출판기념전, 원화전, 소장본 전시 등 책과 책 속의 그림을 주제로 한 전시를 열고 있습니다. 매달 그림책 중독자 모임을 진행하고 있으며, 작가와의 만남, 출판사와의 협업을 통해 책을 사랑하는 사람들과 함께하는 시간을 갖고 있습니다. 
+                            </p>
+                        </div>
+
+                        <div class="imgBox">
+                            <div class="img"></div>
+                        </div>
+                    </div>
+                    <div class="exTable">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>운영시간</td>
+                                    <td>매일 13시 ~21시 ㅣ 월요일 휴무</td>
+                                </tr>
+                                <tr>
+                                    <td>홈페이지</td>
+                                    <td>http://www.bplatform.net</td>
+                                </tr>
+                                <tr>
+                                    <td>페이스북</td>
+                                    <td>facebook.com/bplatform</td>
+                                </tr>
+                                <tr>
+                                    <td>인스타그램</td>
+                                    <td>instagram.com/bplatform</td>
+                                </tr>
+                                <tr>
+                                    <td>블로그</td>
+                                    <td>http://blog.naver.com/bplatform</td>
+                                </tr>
+                                <tr>
+                                    <td>문의</td>
+                                    <td>b-platform@naver.com ㅣ 책 전시, 작가와의 만남, 대관 문의 등</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="program">
+                    <h4 class="subTit">
+                        <span>프로그램</span>
+                    </h4>
+                    <div class="wrap cf">
+                        <div class="txtBox">
+                            <h5>마포만보_망원1동/합정동</h5>
+                            <div class="tag">
+                                <span>#랜선여행</span>
+                                <span>#마포만보</span>
+                                <span>#망원1동</span>
+                                <span>#어쩌다서점</span>
+                                <span>#합정동</span>
+                                <span>#B-PLATFORM</span>
+                            </div>
+                            <p>
+                                안녕하세요. 이번 주 마포만보에선 망원1동 어쩌다가게 1층에 위치한 어쩌다 서점과 합정동 B-PLATFORM에 방문해보았습니다. 가을은 독서의 계절이라는데, 여러분들도 동네 서점에 한번 방문해보시길 바랍니다. 외출 시엔 항상 마스크를 착용하시고 외출 후엔 반드시 손을 씻어주세요~!
+                            </p>
+                        </div>
+                        <div class="imgBox">
+                            <div class="img"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photoList">
+                    <h4 class="subTit">
+                        <span>사진 보기</span>
+                    </h4>
+
+                    <div class="imgBox">
+                        <img src="../images/travel_sub_pic_001.jpg" alt="">
+                        <img src="../images/travel_sub_pic_002.jpg" alt="">
+                        <img src="../images/travel_sub_pic_003.jpg" alt="">
+                        <img src="../images/travel_sub_pic_004.jpg" alt="">
+                        <img src="../images/travel_sub_pic_005.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="location">
+                    <h4 class="subTit">
+                        <span>위치 보기</span>
+                    </h4>
+
+                    <div class="mapWrap" id="map"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div class="partner row">
+                <div class="footSlide">
+                    <div class="slide slide1">
+                        <a href="#"><img src="../images/footer_partner_001.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide2">
+                        <a href="#"><img src="../images/footer_partner_002.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide3">
+                        <a href="#"><img src="../images/footer_partner_003.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide4">
+                        <a href="#"><img src="../images/footer_partner_004.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide5">
+                        <a href="#"><img src="../images/footer_partner_005.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide6">
+                        <a href="#"><img src="../images/footer_partner_006.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide7">
+                        <a href="#"><img src="../images/footer_partner_001.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide8">
+                        <a href="#"><img src="../images/footer_partner_002.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide9">
+                        <a href="#"><img src="../images/footer_partner_003.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide10">
+                        <a href="#"><img src="../images/footer_partner_004.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide11">
+                        <a href="#"><img src="../images/footer_partner_005.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide12">
+                        <a href="#"><img src="../images/footer_partner_006.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="companyInfo">
+                <div class="row">
+                    <div class="copyLogo">
+                        <a href="#"><img src="../images/footer_companyInfo_001.png" alt=""></a>
+                        <a href="#"><img src="../images/footer_companyInfo_002.png" alt=""></a>
+                    </div>
+                    <div class="addInfo">
+                        <p>
+                            <span>(129-904) 서울시 마포구 매봉산로 18 마포창업복지관 1, 2층</span>
+                            <span>TEL. 02-303-5279</span>
+                            <span>FAX. 02-6499-1177</span>
+                        </p>
+                        <p>2018 마포마을 여행플랫폼 구축사업단 ALL RIGHTS RESERVED.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            $(document).ready(function($){
+                // 리사이즈
+                var winWidth, hh
+                function init(){
+                    winWidth = $(window).innerWidth()
+                    // sideBorder 위치잡기
+                    hh = $('#testCont').height()
+                    $('.subBorder').css({height: 'calc('+hh+'px + 120px)'})
+                    // footer 위치잡기
+                    $('#footer').css({top: 'calc('+hh+'px + 300px)'})
+                    // 모바일 햄버거버튼 pc에서 사라지게
+                    if( winWidth > 1200 && !$('html').hasClass('pc') ){
+                        $('#header').removeClass('on')
+                        $('.mNav').css({display: 'none', right: '-260px'})
+                        $('.overlay').css({display: 'none'})
+                        $('html').addClass('pc').removeClass('mobile')
+                    } else if ( winWidth <= 1200 && !$('html').hasClass('mobile') ){
+                        $('html').addClass('mobile').removeClass('pc')
+                    } 
+                }
+                init()
+                $(window).resize(function(){ init() })
+
+            })(jQuery)
+
+            // 티맵 불러오기
+            function initTmap(){
+                var map = new Tmapv2.Map("map", { // 지도가 생성될 div
+                    // width : "100%", // 지도의 넓이
+                    // height : "400px" // 지도의 높이
+                });
+            }
+        </script>
+    </div>
+    
+    <script src="js/myjs.js"></script>
+
+</body>
+</html>

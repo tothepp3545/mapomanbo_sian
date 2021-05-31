@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+/* common */
+#container { padding-top: 70px; }
+.pageAddr { height: 50px; background: #fff; padding: 0 20px; line-height: 50px; border-bottom: solid 1px #eaeaea; }
+.pageAddr p { display: inline-block; color: #a8a8a8; font-size: 0.8rem; }
+.pageAddr p span { color: #fa7c80; font-weight: bold; }
+
+/* travel_sub */
+.explanWrap { position: relative; }
+.explanWrap .mainBg { background: url(../images/sub/travel_sub_bg_001.jpg) no-repeat center; background-size: cover; width: 100%; height: 100%; position: absolute; } 
+.explanWrap .txtBox { position: relative; float: right; width: 540px; background: #fff; padding: 50px; margin: 30px 0; }
+.explanWrap .txtBox h3 { font-size: 2rem; font-weight: bold; color: #343434; }
+.explanWrap .tag { color: #ee8285; padding-top: 15px; }
+.explanWrap .desc { color: #343434; margin-top: 80px; }
+.explanWrap .time { color: #868686; margin-top: 10px; font-size: 0.9rem; font-weight: bold; position: relative; padding-left: 15px; }
+.explanWrap .time:before { content: ''; position: absolute; display: inline-block; top: 0; left: 0; width: 15px; height: 15px; background: url(../images/sub/travel_sub_time_icon.png) no-repeat center; }
+.explanWrap .sns { padding: 20px 0 50px; }
+.explanWrap .sns a { margin-right: 10px; }
+.explanWrap .tableWrap { border-top: solid 1px #f1797c; border-bottom: solid 1px #f1797c; padding: 30px 0; }
+.explanWrap table td { padding: 5px 0; vertical-align: top; }
+.explanWrap table td:first-child { width: 25%; color: #797979; }
+.explanWrap table td:last-child { width: 75%; color: #b0b0b0; }
+.explanWrap .bookBtn { margin-top: 40px; }
+.explanWrap .bookBtn a { background: #ee8285; padding: 9px 23px; line-height: 36px; color: #fff; border-radius: 2px; font-size: 1rem; letter-spacing: -1px; }
+
+.course .shopList.row { width: 950px; padding: 0; margin: 0 auto; }
+.course .shopList ul li { float: left; width: 270px; margin-right: 70px; margin-bottom: 50px; }
+.course .shopList ul li:nth-child(3n) { margin-right: 0; }
+.course .shopList ul li a { display: inline-block; height: 173px; width: 100%; position: relative; }
+.course .shopList ul li a .shopBg { background: url(../images/sub/travel_sub_shop_001.jpg) no-repeat center; background-size: cover; width: 100%; height: 100%; border: solid 1px #ececec; border-bottom: none; border-radius: 13px 13px 0 0; position: relative; }
+.course .shopList ul li a .shopBg:before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: inline-block; background: rgba(185,49,49,.8); border-radius: 13px 13px 0 0; opacity: 0; transition: all 0.3s; }
+.course .shopList ul li a:hover .shopBg:before { opacity: 1; }
+
+.course .shopList ul li a span { position: absolute; top: 10px; left: 10px; padding: 3px 18px; border: solid 1px #fa7c80; background: #fff; display: inline-block; border-radius: 50px; font-size: 0.8rem; color: #fa7c80; font-weight: bold; }
+.course .shopList ul li .txtBox { height: 132px; padding: 11px 15px 25px; text-align: center; border: solid 1px #ececec; border-top: none; border-radius: 0 0 13px 13px; }
+.course .shopList ul li .txtBox span { color: #fa7c80; font-size: 1.1rem; font-weight: bold; }
+.course .shopList ul li .txtBox h4 { font-size: 1.2rem; font-weight: normal; padding: 5px 0 17px; color: #363636; }
+.course .shopList ul li .txtBox p { font-size: 0.9rem; color: #494949; height: 2rem; overflow: hidden; }
+.course .mapWrap { width: 100%; height: 600px; }
+
+.gallery { padding-bottom: 60px; }
+.gallery .row2 { padding: 0; width: 950px; margin: 0 auto; }
+
+/* subTit */
+.subTit { padding: 80px 0 70px; text-align: center; position: relative; }
+.subTit:before { content: ''; position: absolute; width: 950px; height: 1px; background: #c7c7c7; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.subTit h3 { font-size: 1.2rem; color: #7e7e7e; font-weight: normal; background: #fff; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 230px; }
+
+
+
+@media only screen and (max-width: 1200px) {
+    .subVis { height: 240px; line-height: 240px; }
+    .subVis img { width: 240px; }
+
+    .travelList { padding: 100px 30px 50px; }
+    .travelList .listBox li { width: 49%; }
+    .travelList .listBox li:nth-child(3n) { margin-right: 2%; }
+    .travelList .listBox li:nth-child(2n) { margin-right: 0; }
+
+    .explanWrap .row { width: 100%; }
+    .explanWrap .mainBg { position: static; height: 350px; }
+    .explanWrap .txtBox { position: static; margin: 0; padding: 50px 0 0; width: 100%; }
+    .explanWrap .desc { margin-top: 30px; }
+    .explanWrap .bookBtn { text-align: center; }
+
+    .course .shopList { display: none; }
+    .course .mapWrap { height: 400px; }
+    .gallery .row2 { width: 100%; }
+    .subTit:before { width: 100%; }
+}
+
+@media only screen and (max-width: 860px) {
+    #container { padding-top: 50px; }
+    .pageAddr { height: 30px; line-height: 30px; }
+
+    .cateWrap .cateAll a { width: 250px; }
+    .cateWrap .cateAll a i { display: inline-block; }
+    .cateWrap .cateAll .cateMenu { display: none; line-height: 1rem; }
+
+    .travelList { padding: 80px 0 50px; }
+    .travelList .listBox li { float: none; width: 100%; margin-bottom: 10%; }
+    .travelList .listBox li .thumbBox .bg { border: none; border-radius: 0; cursor: pointer; }
+    .travelList .listBox li .thumbBox span:before { display: none; }
+    .travelList .listBox li .contBox { padding: 40px 6%; border-radius: 0; margin: -80px 5% 0; background: #fff; border: none; }
+
+    .explanWrap table td { font-size: 0.8rem; }
+}

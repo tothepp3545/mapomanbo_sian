@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+.row { width: 98%; margin: 0 auto; position: relative; height: 100%; }
+
+/* video */
+.mbYTP_wrapper { display: block; }
+#videoBg { position: fixed; width: 100%; height: 100%; }
+#videoBg video { min-width:100%; min-height:100%; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); }
+#videoBg .pattern { width: 100%; height: 100%; background: url(../../images/raster.png) repeat top left; top: 0; left: 0; position: absolute; z-index: 2; }
+#videoBg .mobileVideo { position: relative; width: 100%; height: 100%; background: #000; display: block; display: none; }
+#videoBg .mobileVideo img { position: absolute; height: 100%; width: 100%; }
+
+/* header */
+#testObj { position: absolute; width: 100%; height: 100%; z-index: 2; padding: 0 4%; }
+#testObj .header { position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    border-bottom: 1px solid rgba(255,255,255,1); width: 100%; height: 100px; line-height: 100px; }
+#testObj .header .nav { position: absolute; top: 0; left: 50%; transform: translateX(-50%); }
+#testObj .header .nav .menu { color: #fff; text-align: center; float: left; padding: 0 36px; font-size: 1.1rem; }
+
+#testObj .header .rightBox { position: absolute; right: 0; top: 50%; transform: translateY(-50%); }
+#testObj .header .rightBox > div { float: left; }
+#testObj .header .rightBox .members a { margin-left: 2px; background: #a40783; border-radius: 50%; width: 43px; height: 43px; float: left; line-height: 43px; text-align: center; margin-left: 10px; }
+#testObj .header .rightBox .members a img { width: 31px; }
+
+#testObj .header .rightBox .search { height: 43px; width: 43px; padding: 5px 0; border-radius: 50px; margin-left: 10px; background: #a40783; }
+#testObj .header .rightBox .search input { float: left; width: 149px; height: 30px; background: transparent; border: none; color: #fff; opacity: 0; display: none; }
+#testObj .header .rightBox .search input::placeholder { color: rgba(255,255,255,.8); }
+#testObj .header .rightBox .search img { float: right; width: 31px; height: auto; border-radius: 50%; padding: 0; margin-right: 6px; }
+
+/* mobile nav button */
+#testObj .header .mNavOpen {position: absolute; display: none; top: 50%; right: 0; transform: translateY(-50%); width: 32px; height: 20px; z-index: 8; cursor: pointer; }
+#testObj .header .mNavOpen a { display: block; }
+#testObj .header .mNavOpen span { position: absolute; display: block; width: 100%; height: 3px; background: #fff; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 10px; transition: all 0.5s; }
+#testObj .header .mNavOpen span:nth-of-type(1) { top: 0; }
+#testObj .header .mNavOpen span:nth-of-type(3) { top: 100%; }
+
+
+
+/* container */
+#container .mMainVis { display: none; }
+
+/* footer */
+#footer { position: relative; width: 100%; background: #fff; }
+#footer .row { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+#footer .partner { height: 95px; }
+.footSlide .slide { margin: 0 20px; background-size: cover; background-position: center; position: relative; }
+.footSlide .slide a { text-align: center; }
+.footSlide .arr-box { position: absolute; height: 33px; width: 33px; top: 50%; transform: translateY(-50%); background: transparent; }
+.footSlide .prev { left: 0; text-align: right; }
+.footSlide .next { right: 0; text-align: left; }
+.footSlide .arr { display: inline-block; border-top: 2px solid #a40783; border-left: 2px solid #a40783; width: 16px; height: 16px; transform: translateY(-50%); line-height: 1; }
+.footSlide .arr-left { transform: rotate(-45deg); margin: 3px 6px 0 0; }
+.footSlide .arr-right { transform: rotate(-225deg); margin: 3px 0 0 7px; }
+#footer .companyInfo { height: 100%; background: #fcfaf9; padding: 50px 0 80px; border-top: 1px solid #e6e6e6; }
+#footer .companyInfo .addInfo { color: #5b5b5b; padding-top: 35px; line-height: 2.2rem; }
+#footer .companyInfo .addInfo p span { padding-right: 10px; display: inline-block; }
+
+
+
+
+@media only screen and (max-width: 1200px) {
+    #testObj .header .nav { display: none;}
+    #testObj .header .rightBox { display: none; }
+    #testObj .header .mNavOpen { display: block; }
+}
+
+@media only screen and (max-width: 860px) {
+    .mbYTP_wrapper { display: none; }
+    #videoBg .mobileVideo { display: block; }
+
+    #footer { top: 0; }
+    #footer .companyInfo .copyLogo a { display: inline-block; width: 46%; }
+    #footer .companyInfo .copyLogo a img { width: 100%; }
+    #footer .companyInfo .addInfo { font-size: 0.9rem; }
+}

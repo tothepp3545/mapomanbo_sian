@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mapomanbo</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.1/css/jquery.mb.YTPlayer.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.1/jquery.mb.YTPlayer.min.js"></script>
+    <script src="js/slick.min.js"></script>
+</head>
+<body>
+
+    <div id="wrap">
+       
+        <div id="testObj">
+            <div class="leftBox">
+                <div class="logo">
+                    <img src="../images/logo.png" alt="">
+                </div>
+
+                <div class="nav">
+                    <div class="menu">
+                        <div class="dot"></div>
+                        <p>마포만보</p>
+                        <span class="line"></span>
+                    </div>
+                    <div class="menu depth1">
+                        <div class="dot"></div>
+                        <p>여행</p>
+                        <span class="line"></span>
+                        <div class="depth2">
+                            <p>마을여행</p>
+                            <p>랜선여행</p>
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <div class="dot"></div>
+                        <p>공간</p>
+                        <span class="line"></span>
+                    </div>
+                    <div class="menu depth1">
+                        <div class="dot"></div>
+                        <p>기록</p>
+                        <span class="line"></span>
+                        <div class="depth2">
+                            <p>도보여행</p>
+                            <p>해설사 인터뷰</p>
+                            <p>행사</p>
+                        </div>
+                    </div>
+                    <div class="menu depth1">
+                        <div class="dot"></div>
+                        <p>정보</p>
+                        <span class="line"></span>
+                        <div class="depth2">
+                            <p>공지사항</p>
+                            <p>자주하는 질문</p>
+                            <p>문의</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- nav hover script -->
+                <script>
+                    (function($){
+                        $('.nav .menu').hover( 
+                            function(){
+                                if($(this).hasClass('depth1')){
+                                    $(this).find('.line').stop().animate({
+                                        width: '100%'
+                                    }, 700)
+                                    $(this).find('.depth2').stop().animate({
+                                        opacity: '1'
+                                    }, 500).css({
+                                        display: 'block'
+                                    })
+                                }
+                            },
+                            function(){
+                                $(this).find('.line').stop().animate({
+                                        width: '0'
+                                    }, 500)
+                                    $(this).find('.depth2').stop().animate({
+                                        opacity: '0'
+                                    }, 500).css({
+                                        display: 'none'
+                                    })
+                            }
+                        )
+
+                    })(jQuery)
+                </script>
+
+                <div class="sns">
+                    <div>
+                        <img src="../images/sns_facebook.png" alt="">
+                    </div>
+                    <div class="insta">
+                        <img src="../images/sns_insta.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../images/sns_youtube.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="rightWrap">
+                <div class="members">
+                    <div class="login">
+                        <img src="../images/icon_login_big.png" alt="">
+                        <img src="../images/icon_reservation_big.png" alt="">
+                    </div>
+                </div>
+
+                <div class="search">
+                    <img src="../images/icon_search_big.png" alt="">
+                </div>
+            </div>
+
+            <div class="siteMap">
+                <div class="bg"></div>
+                <div class="btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <!-- siteMap 버튼 클릭 -->
+                <script>
+                    (function($){
+                        function openSM(){
+                            $('.siteMap').toggleClass('on')
+                            if($('.siteMap').hasClass('on')){
+                                $('.siteMap .content').stop().slideDown(800)
+                            } else {
+                                $('.siteMap .content').stop().slideUp(800)
+                            }
+                        }
+                        $('.siteMap .btn').on('click', openSM)
+                    })(jQuery)
+                </script>
+                    
+                <div class="content">
+                    <div class="row">
+                        <h2>SITE MAP</h2>
+                        <ul class="smList">
+                            <li>
+                                <p class="depth1">MAIN</p>
+                            </li>
+                            <li>
+                                <p class="depth1">마포만보</p>
+                            </li>
+                            <li>
+                                <p class="depth1">여행</p>
+                                <ul class="depth2">
+                                    <li>마을여행</li>
+                                    <li>랜선여행</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p class="depth1">공간</p>
+                                <ul class="depth2">
+                                    <li>음식점</li>
+                                    <li>문화공간</li>
+                                    <li>공원</li>
+                                    <li>가게</li>
+                                    <li>카페</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p class="depth1">기록</p>
+                                <ul class="depth2">
+                                    <li>도보여행</li>
+                                    <li>해설사 인터뷰</li>
+                                    <li>행사</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p class="depth1">정보</p>
+                                <ul class="depth2">
+                                    <li>공지사항</li>
+                                    <li>자주하는 질문</li>
+                                    <li>문의</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p class="depth1">MY</p>
+                                <ul class="depth2">
+                                    <li>로그인</li>
+                                    <li>회원가입</li>
+                                    <li>아이디/비밀번호 찾기</li>
+                                    <li>내 예약</li>
+                                    <li>구매한 영상</li>
+                                    <li>결제내역</li>
+                                    <li>내정보</li>
+                                    <li>회원정보변경</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mNavOpen">
+                <div class="btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="clockBox">
+                <div class="rotate"></div>
+                <div class="niddleBox">
+                    <div class="niddle">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <figure id="videoBg">
+            <div class="pattern"></div>
+            <!-- <video muted autoplay loop src="../video/video02.mp4"></video> -->
+            <div class="mainVideo player"></div>
+            <div class="mobileVideo">
+                <img src="../images/mobile_gif_01.gif" alt="">
+            </div>
+        </figure>
+
+        <footer id="footer">
+            <div class="partner row">
+                <div class="footSlide">
+                    <div class="slide slide1">
+                        <a href="#"><img src="../images/footer_partner_001.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide2">
+                        <a href="#"><img src="../images/footer_partner_002.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide3">
+                        <a href="#"><img src="../images/footer_partner_003.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide4">
+                        <a href="#"><img src="../images/footer_partner_004.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide5">
+                        <a href="#"><img src="../images/footer_partner_005.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide6">
+                        <a href="#"><img src="../images/footer_partner_006.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide7">
+                        <a href="#"><img src="../images/footer_partner_001.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide8">
+                        <a href="#"><img src="../images/footer_partner_002.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide9">
+                        <a href="#"><img src="../images/footer_partner_003.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide10">
+                        <a href="#"><img src="../images/footer_partner_004.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide11">
+                        <a href="#"><img src="../images/footer_partner_005.jpg" alt=""></a>
+                    </div>
+                    <div class="slide slide12">
+                        <a href="#"><img src="../images/footer_partner_006.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="companyInfo">
+                <div class="row">
+                    <div class="copyLogo">
+                        <a href="#"><img src="../images/footer_companyInfo_001.png" alt=""></a>
+                        <a href="#"><img src="../images/footer_companyInfo_002.png" alt=""></a>
+                    </div>
+                    <div class="addInfo">
+                        <p>
+                            <span>(129-904) 서울시 마포구 매봉산로 18 마포창업복지관 1, 2층</span>
+                            <span>TEL. 02-303-5279</span>
+                            <span>FAX. 02-6499-1177</span>
+                        </p>
+                        <p>2018 마포마을 여행플랫폼 구축사업단 ALL RIGHTS RESERVED.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    
+    <script src="js/myjs.js"></script>
+
+</body>
+</html>

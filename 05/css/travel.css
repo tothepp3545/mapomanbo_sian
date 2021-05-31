@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+/* common */
+#container { padding-top: 70px; }
+.pageAddr { height: 30px; background: #fff; padding: 0 20px; line-height: 30px; display: none; }
+.pageAddr p { display: inline-block; color: #a8a8a8; font-size: 0.8rem; }
+.pageAddr p span { color: #fa7c80; font-weight: bold; }
+
+/* travel */
+.subVis { position: relative; background: url(../images/sub/travel_vis_bg.png) no-repeat center; background-size: cover; height: 427px; line-height: 427px; text-align: center; }
+
+.subTit { padding: 70px 0 110px; text-align: center; font-size: 1.9rem; line-height: 2.9rem; }
+.subTit p { padding-top: 55px; color: #121212; font-size: 1.5rem; }
+
+.cateWrap { height: 65px; background: #fdf5f5; }
+.cateWrap .row { position: relative; }
+.cateWrap .cateAll { line-height: 65px; }
+.cateWrap .cateAll a { font-size: 0.9rem; padding: 5px 10px; border: 1px solid #ee8285; border-radius: 50px; color: #ee8285; font-weight: normal; margin-right: 10px; background: transparent; transition: all 0.3s; }
+.cateWrap .cateAll a:hover { color: #fff; background: #ee8285; }
+.cateWrap .cateAll a i { padding-left: 0.5rem; display: none; }
+.cateWrap .cateAll a.on { color: #fff; background: #ee8285; }
+.cateWrap .cateAll h3, .cateWrap .cateAll .cateMenu { display: inline-block; }
+.cateWrap .cateAll .cateMenu p { display: inline-block; }
+
+.cateWrap .searchBox { position: absolute; top: 14px; right: 20px; }
+.cateWrap .searchBox form { height: 37px; border-radius: 50px; width: 37px; background: #ee8285; }
+.cateWrap .searchBox form input { height: 37px; width: 80%; line-height: 38px; padding-left: 1rem; background: transparent; border: none; color: #ee8285; font-weight: bold; display: none; }
+.cateWrap .searchBox form .searchBtn { float: right; line-height: 38px; font-size: 1rem; color: #fff; padding-right: 11px; }
+
+.travelList { padding: 100px 0 50px; }
+.travelList .listBox li { float: left; width: 32%; margin-right: 2%; margin-bottom: 4%; }
+.travelList .listBox li:nth-child(3n) { margin-right: 0; }
+.travelList .listBox li .thumbBox { position: relative; height: 230px; }
+.travelList .listBox li .thumbBox .bg { 
+    background-position: center; background-repeat: no-repeat; background-size: cover; height: 100%;
+    border: 1px solid #d8d8d8; border-bottom: none; border-radius: 10px 10px 0 0; cursor: pointer;
+    background-image: url(../images/sub/travel_001_thumb.jpg);
+}
+.travelList .listBox li .thumbBox span { position: absolute; top: 19px; left: -5px; width: 76px; height: 33px; line-height: 33px; text-align: center; font-size: 0.9rem; background: #ee8285; color: #fff; }
+.travelList .listBox li .thumbBox span:before { 
+    content: ''; position: absolute; display: inline-block; bottom: -5px; left: 0;
+    border-top: 5px solid #b76466; border-left: 7px solid transparent;
+}
+.travelList .listBox li .contBox { position: relative; padding: 40px 20px; border: 1px solid #d8d8d8; border-top: none; border-radius: 0 0 10px 10px; height: 255px; }
+.travelList .listBox li .contBox h4 { font-size: 1.5rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.travelList .listBox li .contBox em { display: block; font-size: 0.9rem; color: #9e9e9e; font-weight: bold; padding: 10px 0 30px; margin-bottom: 20px; border-bottom: 1px solid #d8d8d8; }
+.travelList .listBox li .contBox p { color: #555; font-size: 0.9rem; font-weight: bold; height: 2rem; overflow: hidden; }
+.travelList .listBox li .contBox .tag { position: absolute; bottom: 40px; }
+.travelList .listBox li .contBox .tag span { color: #ee8285; font-size: 0.8rem; font-weight: bold; padding-right: 4px; }
+
+.travelList .pageNum { text-align: center; height: 32px; position: relative; width: 190px; left: 50%; transform: translateX(-50%); }
+.travelList .pageNum .arr { position: absolute; top: 0; line-height: 35px; background: transparent; }
+.travelList .pageNum .arr.prev { left: 0; display: none; }
+.travelList .pageNum .arr.next { right: 0; }
+.travelList .pageNum p { display: inline-block; font-size: 1.1rem; line-height: 32px; padding: 0 10px; }
+.travelList .pageNum p.on { color: #ee8285; }
+
+
+
+
+@media only screen and (max-width: 1200px) {
+    .subVis { height: 240px; line-height: 240px; }
+    .subVis img { width: 240px; }
+
+    .cateWrap .cateAll a { width: 250px; }
+    .cateWrap .cateAll a i { display: inline-block; }
+    .cateWrap .cateAll .cateMenu { display: none; line-height: 1rem; }
+
+    .travelList { padding: 100px 30px 50px; }
+    .travelList .listBox li { width: 49%; }
+    .travelList .listBox li:nth-child(3n) { margin-right: 2%; }
+    .travelList .listBox li:nth-child(2n) { margin-right: 0; }
+}
+
+@media only screen and (max-width: 860px) {
+    #container { padding-top: 50px; }
+    .pageAddr { display: block; }
+
+    .travelList { padding: 80px 0 50px; }
+    .travelList .listBox li { float: none; width: 100%; margin-bottom: 10%; }
+
+    .travelList .listBox li .thumbBox .bg { border: none; border-radius: 0; cursor: pointer; }
+    .travelList .listBox li .thumbBox span:before { display: none; }
+    .travelList .listBox li .contBox { padding: 40px 6%; border-radius: 0; margin: -80px 5% 0; background: #fff; border: none; }
+}

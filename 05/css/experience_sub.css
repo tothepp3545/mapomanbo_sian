@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/* common */
+#container { padding-top: 70px; }
+.pageAddr { height: 50px; background: #fff; padding: 0 20px; line-height: 50px; border-bottom: solid 1px #eaeaea; }
+.pageAddr p { display: inline-block; color: #a8a8a8; font-size: 0.8rem; }
+.pageAddr p span { color: #fa7c80; font-weight: bold; }
+
+/* title */
+.row950 { width: 950px; margin: 0 auto; }
+.titBox { padding: 90px 0 50px; text-align: center; }
+.titBox em { font-size: 1rem; background: #ee8285; padding: 3px 15px; color: #fff; border-radius: 50px; font-weight: bold; }
+.titBox h3 { font-size: 2.5rem; color: #343434; padding: 16px 0 10px; letter-spacing: -1px; }
+.titBox .tag span { color: #ee8285; font-size: 1.1rem; padding-right: 8px; }
+.titBox .tag span:last-child { padding-right: 0; }
+
+/* slide */
+.pcSlide { width: 100%; }
+.pcSlide .slides li { height: 600px; }
+.pcSlide .slides li img { width: 100%; }
+.pcSlide .flex-direction-nav { display: none; }
+.pcSlide .flex-direction-nav a { background: #EC8387; margin: -20px 0 0; border-radius: 50%; text-align: center; }
+.pcSlide .flex-direction-nav a:before { color: #fff; font-size: 20px; line-height: 40px; }
+.pcSlide .flex-control-nav { display: none; }
+
+/* explan */
+.explanBox { padding: 40px 0 60px; }
+.explanBox .introBox { float: left; width: 50%; padding-right: 5%; }
+.explanBox .introBox h4 { color: #EC8387; font-size: 1.2rem; }
+.explanBox .introBox p { font-size: 1rem; line-height: 1.8rem; padding: 35px 0 20px; }
+.explanBox .introBox .sns a { margin-right: 10px; }
+
+.explanBox .table { float: right; width: 50%; border-top: solid 1px #f1797c; border-bottom: solid 1px #f1797c; padding: 30px 0; }
+.explanBox .table td { padding: 8px 0; vertical-align: top; }
+.explanBox .table td:first-child { width: 30%; color: #797979; padding-right: 1rem; }
+.explanBox .table td:last-child { width: 70%; color: #b0b0b0; }
+.explanBox .table td strong { color: #222; }
+
+/* map */
+.course { padding-bottom: 100px; }
+.course .subTit { padding: 80px 0 60px; text-align: center; position: relative; }
+.course .subTit:before { content: ''; position: absolute; width: 950px; height: 1px; background: #c7c7c7; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.course .subTit h3 { font-size: 1.2rem; color: #7e7e7e; font-weight: normal; background: #fff; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 230px; }
+.course .mapWrap { width: 100%; height: 400px; }
+
+
+
+
+@media only screen and (max-width: 1200px) {
+    .row950 { width: 100%; }
+
+    .pcSlide .slides li { height: 60vw; }
+
+    .titBox em { font-size: 0.8rem; }
+    .titBox h3 { font-size: 1.8rem; padding: 15px 0 3px; }
+    .titBox .tag span { font-size: 0.9rem; padding-right: 5px; }
+
+    .explanBox { padding: 30px 3% 40px; }
+    .explanBox .introBox { float: none; width: 100%; padding-right: 0; padding-bottom: 50px; }
+    .explanBox .table { float: none; width: 100%; }
+
+}
+
+@media only screen and (max-width: 860px) {
+    #container { padding-top: 50px; }
+    .pageAddr { height: 30px; line-height: 30px; }
+
+    .exSubSlider { width: 100%; }
+    .pcSlide { position: relative; }
+    .pcSlide .slides li img { height: 60vw; }
+    .pcSlide .flex-direction-nav { display: block; }
+    .pcSlide .flex-direction-nav a { opacity: 1; }
+    .pcSlide .flex-direction-nav .flex-prev { left: 10px; }
+    .pcSlide .flex-direction-nav .flex-next { right: 10px; }
+    .pcSlide .flexslider:hover .flex-direction-nav .flex-prev, .mobileImg .flexslider:hover .flex-direction-nav .flex-next { opacity: 1; }
+
+}
