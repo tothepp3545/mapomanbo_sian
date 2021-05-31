@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.row { width: 90%; margin: 0 auto; }
+.row { width: 90%; max-width: 1200px; margin: 0 auto; }
 
 /* header */
 #header { position: absolute; top: 0; left: 0; width: 100%; height: 90px; line-height: 90px; background: rgba(130,32,128,.6); z-index: 3; }
@@ -94,7 +94,7 @@
 .subVis .mobileVideo img { position: absolute; width: 100%; }
 
 /* content */
-#testCont { position: absolute; left: 0; top: 0; z-index: 2; }
+#testCont { position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 100%; z-index: 2; }
 #testCont .videoHeight { width: 100%; height: 500px; background: transparent; opacity: 0; }
 
 /* addr */
@@ -107,7 +107,7 @@
 #testCont .listBox li { float: left; width: 33.33%; border-top: 1px solid #000; border-left: 1px solid #000; padding: 30px; }
 #testCont .listBox li:nth-child(3n) { margin-right: 0; border-right: 1px solid #000; }
 #testCont .listBox li:nth-last-child(1), #testCont .listBox li:nth-last-child(2), #testCont .listBox li:nth-last-child(3) { border-bottom: 1px solid #000; }
-#testCont .listBox .imgBox { position: relative; height: 400px; }
+#testCont .listBox .imgBox { position: relative; height: 300px; }
 #testCont .listBox .imgBox .bg { 
     background-position: center; background-repeat: no-repeat; background-size: cover; height: 100%;
     border-radius: 5px; }
