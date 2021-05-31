@@ -5,4 +5,12 @@
 <br><br>
 01_1
 <br>
-https://github.com/tothepp3545/mapomanbo_sian/edit/main/README.md
+https://tothepp3545.github.io/mapomanbo_sian/01_1
+<br><br>
+01_2
+<br>
+https://tothepp3545.github.io/mapomanbo_sian/01_2
+<br><br>
+01_3
+<br>
+https://tothepp3545.github.io/mapomanbo_sian/01_3
