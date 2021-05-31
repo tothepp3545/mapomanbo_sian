@@ -9,10 +9,8 @@
 <br>
 01_1
 <br>
-<a href="https://tothepp3545.github.io/mapomanbo_sian/01_1" target="_blank">https://tothepp3545.github.io/mapomanbo_sian/01_1</a>
-  [텍스트][참조명]
+https://tothepp3545.github.io/mapomanbo_sian/01_1
 <br><br>
-  
 01_2
 <br>
 https://tothepp3545.github.io/mapomanbo_sian/01_2
